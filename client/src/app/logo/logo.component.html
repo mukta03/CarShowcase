@@ -1,0 +1,71 @@
+<div class="filter-container">
+  <div class="brand-filter">
+    <label for="brandSelect">Select Brand:</label>
+    <select id="brandSelect" [(ngModel)]="selectedBrand" (change)="filterCars()">
+      <option value="">All Brands</option>
+      <option *ngFor="let brand of brands" [value]="brand">{{ brand }}</option>
+    </select>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let car of filteredCars">
+    <img [src]="car.image" alt="{{ car.name }}">
+    <h6>{{ car.name }}</h6>
+    <a [routerLink]="['/car', car.id]">
+      <button class="button" type="submit">Know more</button>
+    </a>
+  </div>
+</div>
+ 
+
+
+
+<!-- <div class="grid-container">
+  <div class="grid-item"><img src="assets/img/car1.webp"><h6>BMW iX</h6>
+  <a href="" routerLink="/car1"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car2.webp"><h6>BMW 6 Series</h6>
+  <a href="" routerLink="/car2"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car3.webp" alt=""><h6>BMW i7</h6>
+  <a href="" routerLink="/car3"><button class="button" type="submit">Know more</button></a>
+  </div>  
+  <div class="grid-item"><img src="assets/img/car4.webp" alt=""><h6>Lexus LM</h6>
+  <a href="" routerLink="/car4"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car5.webp" alt=""><h6>Hyundai Creta N Line</h6>
+  <a href="" routerLink="/car5"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car6.webp" alt=""><h6>Volvo XC40 Recharge</h6>
+  <a href="" routerLink="/car6"><button class="button" type="submit">Know more</button></a>
+  </div>  
+  <div class="grid-item"><img src="assets/img/car7.webp" alt=""><h6>MG comet EV</h6>
+  <a href="" routerLink="/car7"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car8.webp" alt=""><h6>MG ZS EV</h6>
+  <a href="" routerLink="/car8"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car9.webp" alt=""><h6>BYZ Seal</h6>
+  <a href="" routerLink="/car9"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car10.webp" alt=""><h6>Hyundai VenueHyundai Venue</h6>
+  <a href="" routerLink="/car10"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car11.webp" alt=""><h6>MG Hector</h6>
+  <a href="" routerLink="/car11"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car12.webp" alt=""><h6>Tata Nexon</h6>
+  <a href="" routerLink="/car12"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car13.webp" alt=""><h6>Tata Nexon EV</h6>
+  <a href="" routerLink="/car13"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car14.webp" alt=""><h6>Land Rover Discovery</h6>
+  <a href="" routerLink="/car14"><button class="button" type="submit">Know more</button></a>
+  </div>
+  <div class="grid-item"><img src="assets/img/car15.webp" alt=""><h6>Mahindra Thar</h6>
+  <a href="" routerLink="/car15"><button class="button" type="submit">Know more</button></a>
+  </div>
+  
+</div> -->

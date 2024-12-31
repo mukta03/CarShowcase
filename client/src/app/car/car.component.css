@@ -1,0 +1,40 @@
+img {
+  margin-left: 20px;
+  width: 90%;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.content {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+li::before {
+  content: '✓';
+  color: green;
+  margin-right: 5px;
+}
+
+h3 {
+  padding-left: 10px;
+}

@@ -1,0 +1,39 @@
+<br>
+
+<div *ngIf="car">
+    <div class="row">
+      <div class="column">
+        <img [src]="car.image" alt="{{ car.name }}">
+      </div>
+      <div class="column">
+        <h1>{{ car.name }}</h1>
+        <h2>{{ car.rupees }}</h2>
+        <h3>Top Features</h3>
+        <ul>
+            <li *ngFor="let feature of car.features">{{ feature }}</li>
+        </ul>
+        <h3>Key Specifications</h3>
+        <ul>
+            <li *ngFor="let spec of car.specifications">{{ spec }}</li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="content">
+      <h2>{{ car.name }} Car Latest Update</h2>
+      <p><b>Latest Update:</b> {{ car.latestupdate }} </p>
+      <p><b>{{ car.name }} Price:</b> {{ car.price }} </p>
+      <p><b>{{ car.name }} Variants:</b> {{ car.variants }} </p>
+      <p *ngIf="car.colours"><b>{{ car.name }} Colours:</b> {{ car.colours }} </p>
+      <p *ngIf="car.seatingcapacity"><b>{{ car.name }} Seating Capacity:</b> {{ car.seatingcapacity }} </p>
+      <p *ngIf="car.electricmotor_Range_batterypack"><b>{{ car.name }} Electric Motor, Range and Battery Pack:</b> {{ car.electricmotor_Range_batterypack }} </p>
+      <p *ngIf="car.engine_transmission"><b>{{ car.name }} Engine Transmission:</b> {{ car.engine_transmission }} </p>
+      <p *ngIf="car.battery_motor_range"><b>{{ car.name }} Battery Motor Range:</b> {{ car.battery_motor_range }} </p>
+      <p *ngIf="car.charging"><b>{{ car.name }} Charging:</b> {{ car.charging }} </p>
+      <p *ngIf="car.Features"><b>{{ car.name }} Features:</b> {{ car.Features }} </p>
+      <p *ngIf="car.safety"><b>{{ car.name }} Safety:</b> {{ car.safety }} </p>
+      <p><b>{{ car.name }} Rivals:</b> {{ car.rivals }} </p>
+      <p *ngIf="car.special_edition"><b>{{ car.name }} Special Edition:</b> {{ car.special_edition }} </p>
+    </div>
+  </div>
+  
