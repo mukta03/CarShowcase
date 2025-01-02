@@ -1,26 +1,38 @@
-<br>
-
 <div *ngIf="car">
+  <div class="container">
     <div class="row">
-      <div class="column">
+      <!-- Image Section (Centered) -->
+      <div class="column image-column">
         <img [src]="car.image" alt="{{ car.name }}">
       </div>
-      <div class="column">
+
+      <!-- Information Section -->
+      <div class="column info-column">
         <h1>{{ car.name }}</h1>
         <h2>{{ car.rupees }}</h2>
+      </div>
+    </div>
+
+    <!-- Features and Specifications Section -->
+    <div class="specs-features">
+      <div class="features">
         <h3>Top Features</h3>
         <ul>
-            <li *ngFor="let feature of car.features">{{ feature }}</li>
+          <li *ngFor="let feature of car.features">{{ feature }}</li>
         </ul>
+      </div>
+
+      <div class="specifications">
         <h3>Key Specifications</h3>
         <ul>
-            <li *ngFor="let spec of car.specifications">{{ spec }}</li>
+          <li *ngFor="let spec of car.specifications">{{ spec }}</li>
         </ul>
       </div>
     </div>
-  
+
+    <!-- Content with Additional Details -->
     <div class="content">
-      <h2>{{ car.name }} Car Latest Update</h2>
+      <h2>{{ car.name }} Latest Update</h2>
       <p><b>Latest Update:</b> {{ car.latestupdate }} </p>
       <p><b>{{ car.name }} Price:</b> {{ car.price }} </p>
       <p><b>{{ car.name }} Variants:</b> {{ car.variants }} </p>
@@ -36,4 +48,4 @@
       <p *ngIf="car.special_edition"><b>{{ car.name }} Special Edition:</b> {{ car.special_edition }} </p>
     </div>
   </div>
-  
+</div>
